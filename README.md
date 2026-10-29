@@ -10,28 +10,25 @@ A collection of agent skills for Claude Code and other `SKILL.md`-compatible age
 
 ## Installation
 
-Clone the repo, then copy or symlink the skill into your agent's skills directory.
+Install with the [`skills`](https://github.com/vercel-labs/skills) CLI. It needs Node.js, and `npx` fetches the CLI on demand.
 
 ```bash
-git clone https://github.com/theheavenlyhacker/skills.git
-cd skills
+npx skills add theheavenlyhacker/skills
 ```
 
-**Claude Code, all projects (user-level):**
+Install only this skill:
 
 ```bash
-mkdir -p ~/.claude/skills
-ln -s "$PWD/skills/thesis-crosscheck" ~/.claude/skills/thesis-crosscheck
+npx skills add theheavenlyhacker/skills --skill thesis-crosscheck
 ```
 
-**Claude Code, one project only:**
+Install globally (all projects) for Claude Code:
 
 ```bash
-mkdir -p <project>/.claude/skills
-cp -r skills/thesis-crosscheck <project>/.claude/skills/
+npx skills add theheavenlyhacker/skills --skill thesis-crosscheck -g -a claude-code
 ```
 
-Restart the session so the skill is picked up. Other agents: place the `thesis-crosscheck/` folder wherever that agent loads `SKILL.md` skills from.
+Restart your agent session so the skill is picked up. To list or remove it later, use `npx skills list` and `npx skills remove thesis-crosscheck`.
 
 ## Usage: thesis-crosscheck
 
