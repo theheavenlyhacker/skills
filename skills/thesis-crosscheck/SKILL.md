@@ -45,6 +45,14 @@ Identify the available materials:
 
 If essential artifacts are missing, request them from the user.
 
+If the thesis or deck is a link rather than a local file, read it through an MCP connector when one is available:
+
+- Google Docs link (`docs.google.com/document/...`): use a Google Docs or Google Drive MCP tool to read the full content.
+- Canva link (`canva.com/design/...`): use a Canva MCP tool to read every page and any speaker notes.
+- Local `.docx` or `.pptx`: read the file directly; no connector is needed.
+
+If the connector is not installed, not authenticated, or cannot access the file, record the limitation in the inventory and ask the user to connect it or export the file as PDF, DOCX, or PPTX. Connectors are read-only here; never edit the user's documents.
+
 Create an artifact inventory recording filenames, formats, accessible sections, extraction status, and limitations.
 
 For repositories, identify the project structure, main entry points, modules, dependencies, tests, database components, and deployment configuration before analyzing implementation details.

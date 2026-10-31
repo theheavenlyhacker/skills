@@ -62,6 +62,22 @@ Notes:
 - Reports and the knowledge base are saved only when the agent can write files.
 - Scores reflect the mock interview and the evidence reviewed. They don't predict the outcome of an official defense.
 
+## Connecting Google Docs and Canva (MCP)
+
+The thesis and deck can also be Google Docs or Canva links. Connect the matching MCP servers so the agent can read them:
+
+```bash
+claude mcp add --transport http canva https://mcp.canva.com/mcp
+```
+
+For Google Docs, connect the Google Drive connector in Claude (Settings → Connectors), or add any Google Docs/Drive MCP server to your agent. Authenticate when prompted, then use links in the prompt:
+
+```text
+Use thesis-crosscheck. Thesis: https://docs.google.com/document/d/..., deck: https://www.canva.com/design/..., repo: ./code
+```
+
+Without a connector, the skill records the limitation and asks you to export the file instead. Access is read-only.
+
 ## Adding a skill
 
 Create `skills/<name>/SKILL.md` with `name` and `description` frontmatter, then add a row to the table above.
